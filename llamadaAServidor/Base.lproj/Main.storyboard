@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="llamadaAServidor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,52 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ingresa el ISBN" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="rTd-5S-L1R">
+                                <rect key="frame" x="171" y="111" width="258" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="URL" returnKeyType="search"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Aquí aparecerá la información." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0Tw-65-9bO">
+                                <rect key="frame" x="180" y="224" width="240" height="84"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="W1K-sH-gxR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Captura el ISBN sin guiones" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UgO-RC-qAj">
+                                <rect key="frame" x="171" y="49" width="258" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="258" id="6Y6-7T-RjI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rTd-5S-L1R" firstAttribute="centerX" secondItem="0Tw-65-9bO" secondAttribute="centerX" id="2K6-3D-CIZ"/>
+                            <constraint firstItem="rTd-5S-L1R" firstAttribute="top" secondItem="UgO-RC-qAj" secondAttribute="bottom" constant="41" id="2xo-eS-Cvz"/>
+                            <constraint firstItem="0Tw-65-9bO" firstAttribute="top" secondItem="rTd-5S-L1R" secondAttribute="bottom" constant="83" id="6ec-8d-k3u"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0Tw-65-9bO" secondAttribute="bottom" constant="292" id="bR0-b3-SsN"/>
+                            <constraint firstItem="UgO-RC-qAj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="49" id="cjp-wG-cx4"/>
+                            <constraint firstItem="UgO-RC-qAj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fdX-gi-dTC"/>
+                            <constraint firstItem="UgO-RC-qAj" firstAttribute="trailing" secondItem="rTd-5S-L1R" secondAttribute="trailing" id="kFh-SX-JfN"/>
+                            <constraint firstItem="UgO-RC-qAj" firstAttribute="leading" secondItem="rTd-5S-L1R" secondAttribute="leading" id="ud8-CS-snh"/>
+                            <constraint firstItem="rTd-5S-L1R" firstAttribute="top" secondItem="UgO-RC-qAj" secondAttribute="bottom" constant="41" id="zoj-Pf-iiw"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cajaMuestraInformacion" destination="0Tw-65-9bO" id="EtO-VW-IM1"/>
+                        <outlet property="capturaDeIsbn" destination="rTd-5S-L1R" id="XQi-7W-AtP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="184" y="270"/>
         </scene>
     </scenes>
 </document>

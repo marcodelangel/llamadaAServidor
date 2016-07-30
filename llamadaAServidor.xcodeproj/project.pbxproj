@@ -12,6 +12,8 @@
 		FD2634561D4552A9001A324A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD2634541D4552A9001A324A /* Main.storyboard */; };
 		FD2634581D4552A9001A324A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD2634571D4552A9001A324A /* Assets.xcassets */; };
 		FD26345B1D4552A9001A324A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD2634591D4552A9001A324A /* LaunchScreen.storyboard */; };
+		FD2634631D456304001A324A /* conexionweb.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FD2634621D456304001A324A /* conexionweb.rtf */; };
+		FD3F88611D4C213F0081473A /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3F88601D4C213F0081473A /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		FD2634571D4552A9001A324A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD26345A1D4552A9001A324A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD26345C1D4552A9001A324A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD2634621D456304001A324A /* conexionweb.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = conexionweb.rtf; sourceTree = "<group>"; };
+		FD3F88601D4C213F0081473A /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +60,12 @@
 			children = (
 				FD2634501D4552A9001A324A /* AppDelegate.swift */,
 				FD2634521D4552A9001A324A /* ViewController.swift */,
+				FD3F88601D4C213F0081473A /* Reachability.swift */,
 				FD2634541D4552A9001A324A /* Main.storyboard */,
 				FD2634571D4552A9001A324A /* Assets.xcassets */,
 				FD2634591D4552A9001A324A /* LaunchScreen.storyboard */,
 				FD26345C1D4552A9001A324A /* Info.plist */,
+				FD2634621D456304001A324A /* conexionweb.rtf */,
 			);
 			path = llamadaAServidor;
 			sourceTree = "<group>";
@@ -124,6 +130,7 @@
 			files = (
 				FD26345B1D4552A9001A324A /* LaunchScreen.storyboard in Resources */,
 				FD2634581D4552A9001A324A /* Assets.xcassets in Resources */,
+				FD2634631D456304001A324A /* conexionweb.rtf in Resources */,
 				FD2634561D4552A9001A324A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +144,7 @@
 			files = (
 				FD2634531D4552A9001A324A /* ViewController.swift in Sources */,
 				FD2634511D4552A9001A324A /* AppDelegate.swift in Sources */,
+				FD3F88611D4C213F0081473A /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +294,7 @@
 				FD2634611D4552A9001A324A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
