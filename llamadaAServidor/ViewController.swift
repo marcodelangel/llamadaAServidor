@@ -25,7 +25,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             print("Internet connection FAILED")
             let alert = UIAlertController (title: "Alerta",
                                            message: "No tienes Internet",
-                                           preferredStyle: UIAlertControllerStyle(rawValue: 1)!)
+                                           preferredStyle: UIAlertControllerStyle.Alert)
             let cancelAction = UIAlertAction(title: "Cancel",
                                              style: UIAlertActionStyle.Default,
                                              handler: nil)
@@ -35,6 +35,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
         } else {
             print("Internet connection OK")
             var ISBN = capturaDeIsbn.text!
+            if ISBN.characters.count < 12 {
+                let alertEmpty = UIAlertController(title: "Mensaje",
+                                                   message: "Anota un ISBN sin guiones para iniciar la búsqueda",
+                                                   preferredStyle: UIAlertControllerStyle.Alert)
+                let okAction = UIAlertAction(title: "Ok",
+                                             style: UIAlertActionStyle.Default,
+                                             handler: nil)
+                alertEmpty.addAction(okAction)
+                self.presentViewController(alertEmpty,
+                                           animated: true,
+                                           completion: nil)
+            }else{
             ISBN.insert("-", atIndex: ISBN.startIndex.advancedBy(3))
             ISBN.insert("-", atIndex: ISBN.startIndex.advancedBy(6))
             ISBN.insert("-", atIndex: ISBN.startIndex.advancedBy(10))
@@ -46,6 +58,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             let informacion:NSString = texto!
             cajaMuestraInformacion.text! = informacion as String
             capturaDeIsbn.resignFirstResponder()
+            }
         }
         
         return true
