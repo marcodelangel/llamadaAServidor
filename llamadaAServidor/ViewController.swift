@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
 
     @IBOutlet weak var capturaDeIsbn: UITextField!
     @IBOutlet weak var cajaMuestraInformacion: UITextView!
@@ -16,7 +16,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         capturaDeIsbn.delegate = self
-        
+        cajaMuestraInformacion.delegate = self
+
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -73,7 +74,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        capturaDeIsbn.resignFirstResponder(dismissViewControllerAnimated(true,
+                                            completion: nil))
+        cajaMuestraInformacion.resignFirstResponder(dismissViewControllerAnimated(true,
+                                            completion: nil))
+    }
 
 }
 
