@@ -34,8 +34,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
                                                 completion: nil)
         } else {
             print("Internet connection OK")
-            var ISBN = capturaDeIsbn.text!
-            if ISBN.characters.count < 12 {
+            var ISBN:String = capturaDeIsbn.text!
+            if ISBN.characters.count < 12 || ISBN == "Ingresa el ISBN" {
                 let alertEmpty = UIAlertController(title: "Mensaje",
                                                    message: "Anota un ISBN sin guiones para iniciar la búsqueda",
                                                    preferredStyle: UIAlertControllerStyle.Alert)
@@ -56,11 +56,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
             let datos:NSData? = NSData(contentsOfURL: url!)
             let texto = NSString(data: datos!, encoding: NSUTF8StringEncoding)
             let informacion:NSString = texto!
+            
+                if informacion == "{}"{
+                    cajaMuestraInformacion.text = "No existe el libro, prueba con otro ISBN"
+                }else{
             cajaMuestraInformacion.text! = informacion as String
             capturaDeIsbn.resignFirstResponder()
+                }
             }
         }
-        
         return true
     }
     
