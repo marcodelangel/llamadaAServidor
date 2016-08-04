@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD1AB6011D52EF6B00FACC34 /* noCover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD1AB6001D52EF6B00FACC34 /* noCover.jpg */; };
 		FD2634511D4552A9001A324A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2634501D4552A9001A324A /* AppDelegate.swift */; };
 		FD2634531D4552A9001A324A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2634521D4552A9001A324A /* ViewController.swift */; };
 		FD2634561D4552A9001A324A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD2634541D4552A9001A324A /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD1AB6001D52EF6B00FACC34 /* noCover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = noCover.jpg; sourceTree = "<group>"; };
 		FD26344D1D4552A9001A324A /* llamadaAServidor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = llamadaAServidor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD2634501D4552A9001A324A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD2634521D4552A9001A324A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				FD2634591D4552A9001A324A /* LaunchScreen.storyboard */,
 				FD26345C1D4552A9001A324A /* Info.plist */,
 				FD2634621D456304001A324A /* conexionweb.rtf */,
+				FD1AB6001D52EF6B00FACC34 /* noCover.jpg */,
 			);
 			path = llamadaAServidor;
 			sourceTree = "<group>";
@@ -130,6 +133,7 @@
 			files = (
 				FD26345B1D4552A9001A324A /* LaunchScreen.storyboard in Resources */,
 				FD2634581D4552A9001A324A /* Assets.xcassets in Resources */,
+				FD1AB6011D52EF6B00FACC34 /* noCover.jpg in Resources */,
 				FD2634631D456304001A324A /* conexionweb.rtf in Resources */,
 				FD2634561D4552A9001A324A /* Main.storyboard in Resources */,
 			);
