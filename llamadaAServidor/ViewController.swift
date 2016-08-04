@@ -52,8 +52,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
                             let dictionaryISBN = dictionaryFirstLevel["ISBN:" + ISBN] as! NSDictionary
                             self.titulo.text = dictionaryISBN["title"] as! NSString as String
                             let dictionaryAuthors = dictionaryISBN["authors"] as! NSMutableArray
-                            let ejemplo = dictionaryAuthors.objectAtIndex(0)
-                            print (ejemplo)
                             let array = dictionaryAuthors.objectAtIndex(0) as! NSDictionary
                             self.autores.text = array["name"] as! NSString as String
                         
