@@ -30,7 +30,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }else{
             var ISBN:String = capturaDeIsbn.text!
             
-            if ISBN.characters.count < 12 || ISBN == "Ingresa el ISBN" {
+            if ISBN.characters.count < 12 || ISBN == "Ingresa el ISBN" || ISBN.characters.count > 13{
                 incorrectISBNCaptureAlert()
             }else{
                 ISBN.insert("-", atIndex: ISBN.startIndex.advancedBy(3))
@@ -100,7 +100,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     func incorrectISBNCaptureAlert(){
         let alertEmpty = UIAlertController(title: "Mensaje",
-                                           message: "Anota un ISBN sin guiones para iniciar la búsqueda",
+                                           message: "Anota un ISBN de 13 numeros, sin guiones para iniciar la búsqueda",
                                            preferredStyle: UIAlertControllerStyle.Alert)
         let okAction = UIAlertAction(title: "Ok",
                                      style: UIAlertActionStyle.Default,
